@@ -2,47 +2,47 @@
 function formSubmit() {
     if (!isOneFieldFilled(getUsernameElement())) {
         let usernameMessage = "Username is required"
-        errorMessage(getErrorTextUsername(),usernameMessage);
+        errorMessage(getErrorTextUsername(), usernameMessage);
         redBorber(getUsernameElement());
         return false;
     }
     if (!isOneFieldFilled(getEmailElement())) {
         let emailMessage = "Email is required"
-        errorMessage(getErrorTextEmail(),emailMessage);
+        errorMessage(getErrorTextEmail(), emailMessage);
         redBorber(getEmailElement());
         return false;
     }
     if (!isOneFieldFilled(getPasswordElement())) {
         let passwordMessage = "Password is required"
-        errorMessage(getErrorTextPassword(),passwordMessage);
+        errorMessage(getErrorTextPassword(), passwordMessage);
         redBorber(getPasswordElement());
         return false;
     }
 
     if (!isElementGreaterThan7(getUsernameElement())) {
         let graterThanMessage = "Minimum 8 characters"
-        errorMessage(getErrorTextUsername(),graterThanMessage);
+        errorMessage(getErrorTextUsername(), graterThanMessage);
         redBorber(getUsernameElement());
         return false;
     }
 
     if (!isElementLessThan13(getUsernameElement())) {
         let lessThanMessage = "Maximum 12 characters"
-        errorMessage(getErrorTextUsername(),lessThanMessage);
+        errorMessage(getErrorTextUsername(), lessThanMessage);
         redBorber(getUsernameElement());
         return false;
     }
     
     if (!isRegexEmail(getEmailElement())) {
         let regexEmailMessage = "Invalid email format"
-        errorMessage(getErrorTextEmail(),regexEmailMessage);
+        errorMessage(getErrorTextEmail(), regexEmailMessage);
         redBorber(getEmailElement());
         return false;
     }
     
     if (!isRegexPassword(getPasswordElement())) {
         let regexPasswordMessage = "Password requires minimum 8 characters, maximum 12 characaters, at least one uppercase character, one lowercase character, one number and one symbol"
-        errorMessage(getErrorTextPassword(),regexPasswordMessage);
+        errorMessage(getErrorTextPassword(), regexPasswordMessage);
         redBorber(getUsernameElement());
         return false;
     }
