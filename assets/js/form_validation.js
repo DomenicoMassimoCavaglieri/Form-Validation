@@ -1,48 +1,41 @@
 //Submit form 
 function formSubmit() {
     if (!isOneFieldFilled(getUsernameElement())) {
-        let usernameMessage = "Username is required"
-        errorMessage(getErrorTextUsername(), usernameMessage);
+        errorMessage(getErrorTextUsername(), "Username is required");
         redBorber(getUsernameElement());
         return false;
     }
     if (!isOneFieldFilled(getEmailElement())) {
-        let emailMessage = "Email is required"
-        errorMessage(getErrorTextEmail(), emailMessage);
+        errorMessage(getErrorTextEmail(), "Email is required");
         redBorber(getEmailElement());
         return false;
     }
     if (!isOneFieldFilled(getPasswordElement())) {
-        let passwordMessage = "Password is required"
-        errorMessage(getErrorTextPassword(), passwordMessage);
+        errorMessage(getErrorTextPassword(), "Password is required");
         redBorber(getPasswordElement());
         return false;
     }
 
     if (!isElementGreaterThan7(getUsernameElement())) {
-        let graterThanMessage = "Minimum 8 characters"
-        errorMessage(getErrorTextUsername(), graterThanMessage);
+        errorMessage(getErrorTextUsername(), "Minimum 8 characters");
         redBorber(getUsernameElement());
         return false;
     }
 
     if (!isElementLessThan13(getUsernameElement())) {
-        let lessThanMessage = "Maximum 12 characters"
-        errorMessage(getErrorTextUsername(), lessThanMessage);
+        errorMessage(getErrorTextUsername(), "Maximum 12 characters");
         redBorber(getUsernameElement());
         return false;
     }
     
     if (!isRegexEmail(getEmailElement())) {
-        let regexEmailMessage = "Invalid email format"
-        errorMessage(getErrorTextEmail(), regexEmailMessage);
+        errorMessage(getErrorTextEmail(), "Invalid email format");
         redBorber(getEmailElement());
         return false;
     }
     
     if (!isRegexPassword(getPasswordElement())) {
-        let regexPasswordMessage = "Password requires minimum 8 characters, maximum 12 characaters, at least one uppercase character, one lowercase character, one number and one symbol"
-        errorMessage(getErrorTextPassword(), regexPasswordMessage);
+        errorMessage(getErrorTextPassword(), "Password requires minimum 8 characters, maximum 12 characaters, at least one uppercase character, one lowercase character, one number and one symbol");
         redBorber(getUsernameElement());
         return false;
     }
