@@ -28,13 +28,13 @@ function formSubmit() {
         return false;
     }
     
-    if (!isRegexEmail(getEmailElement())) {
+    if (!isValidEmail(getEmailElement())) {
         errorMessage(getErrorTextEmail(), "Invalid email format");
         redBorber(getEmailElement());
         return false;
     }
     
-    if (!isRegexPassword(getPasswordElement())) {
+    if (!isValidPassword(getPasswordElement())) {
         errorMessage(getErrorTextPassword(), "Password requires minimum 8 characters, maximum 12 characaters, at least one uppercase character, one lowercase character, one number and one symbol");
         redBorber(getUsernameElement());
         return false;
@@ -61,13 +61,13 @@ function isElementLessThan13(inputElement) {
 }
 
 //Check Regular Expression email
-function isRegexEmail(inputElement) {
+function isValidEmail(inputElement) {
     let emailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return inputElement.value.match(emailformat);
 }
 
 //Check Regular Expression password
-function isRegexPassword(inputElement) {
+function isValidPassword(inputElement) {
     let passwordformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,12}$/;
     return inputElement.value.match(passwordformat);
 }
