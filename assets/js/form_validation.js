@@ -1,4 +1,4 @@
-//Submit form 
+//Submit form  
 function formSubmit() {
     if (isOneFieldEmpty(getUsernameElement())) {
         errorMessage(getErrorTextUsername(), "Username is required");
@@ -88,7 +88,7 @@ function errorMessage(errorText, message) {
 //Turn off error
 function turnOffError(errorText, inputElement) {
     errorText.innerHTML = "";
-    inputElement.setAttribute("class", "inputfield_style")
+    inputElement.setAttribute("class", "inputfield_style");
 }
 
 
@@ -130,15 +130,15 @@ function getPasswordElement() {
 
 //Get error text elements from html document
 function getErrorTextUsername() {
-    return document.getElementById("error-text-username")  
+    return document.getElementById("error-text-username");
 }
 
 function getErrorTextEmail() {
-    return document.getElementById("error-text-email")
+    return document.getElementById("error-text-email");
 }
 
 function getErrorTextPassword() {
-    return document.getElementById("error-text-password")
+    return document.getElementById("error-text-password");
 }
 
 
