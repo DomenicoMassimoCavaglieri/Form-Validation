@@ -1,0 +1,106 @@
+/* principali */
+body {
+    background-color: #F1F1F1;
+    color: #464342;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+form > * {
+    text-align: left;
+}
+
+.btn {
+    text-align: center;
+    width: 15rem;
+    height: 2.5rem;
+    background-color: #065B83;
+    border-radius: 30px;
+    font-family: "Poppins";
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    color: #ffffff;
+    margin: 26px 56px 26px 56px;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: 0;
+}
+
+.inputfield_style {
+    border: 1px solid #BDBDBD;
+    color: #464342;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    height: 34px;
+    margin-top: 10px;
+    padding: 0 5px;
+    width: 260px;
+}
+
+input[type="password"] {
+    font: small-caption;
+    font-size: 30px;
+}
+
+.data_insert {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.position__modifier {
+    margin-left: 12%;
+}
+
+/* icona occhio input text*/
+.data_insert i {
+    float: right;
+    margin-left: -25px;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 2;
+    color: #464342;
+}
+
+/* error messages */
+.error-box {
+    width: 240px;
+    height: 30px;
+    font-size: 0.8em;
+    color: #ff0000;
+    padding-top: 5px;
+
+}
+
+.error-box-password {
+    height: 50px;
+}
+
+.input-error {
+    border: solid 1px #ff0000;
+    color: #464342;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    height: 34px;
+    margin-top: 10px;
+    padding: 0 5px;
+    width: 260px;
+}
+
+
+/* media query */
+
+@media screen and (max-width: 767px) {
+
+}
+
+@media screen and (min-width: 768px) {
+ 
+}

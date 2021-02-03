@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <title>MyForm</title>
+</head>
+
+<body>
+    <div class="data_insert">
+        <form id="form" action="" method="POST" onsubmit="return formSubmit();" >
+            <div class="position__modifier">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" class="inputfield_style">
+            </div>
+            <div class="error-box position__modifier">
+                <span id="error-text-username"></span>
+            </div> 
+
+            <div class="position__modifier">
+                <label for="email" >Email</label><br>
+                <input type="text" id="email" name="email" class="inputfield_style">
+            </div>
+            <div class="error-box position__modifier">
+                <span id="error-text-email"></span>
+            </div> 
+
+            <div class="position__modifier">
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" class="inputfield_style">
+                <i class="far fa-eye" id="togglePassword"></i>
+            </div>
+            <div class="error-box position__modifier error-box-password">
+                <span id="error-text-password"></span>
+            </div>
+            <div>
+                <input id="submit" type="submit" class="btn" alt="button to go on load page" value="LOGIN">
+            </div>
+        </form>
+    </div>
+
+    
+    
+   <script src="./assets/js/app.js"></script>
+   <script src="./assets/js/lastValidate.js"></script>
+      <!--<script src="./assets/js/api.js"></script> 
+    <script src="./assets/js/validateFunction.js"></script>
+    <script src="./assets/js/validate.js"></script>
+    <script src="./assets/js/validate2.js"></script>-->
+
+    
+
+</body>
+
+</html>
