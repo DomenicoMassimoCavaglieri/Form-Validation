@@ -1,28 +1,28 @@
 //Submit form 
 function formSubmit() {
-    if (!isOneFieldFilled(getUsernameElement())) {
+    if (isOneFieldEmpty(getUsernameElement())) {
         errorMessage(getErrorTextUsername(), "Username is required");
         redBorber(getUsernameElement());
         return false;
     }
-    if (!isOneFieldFilled(getEmailElement())) {
+    if (isOneFieldEmpty(getEmailElement())) {
         errorMessage(getErrorTextEmail(), "Email is required");
         redBorber(getEmailElement());
         return false;
     }
-    if (!isOneFieldFilled(getPasswordElement())) {
+    if (isOneFieldEmpty(getPasswordElement())) {
         errorMessage(getErrorTextPassword(), "Password is required");
         redBorber(getPasswordElement());
         return false;
     }
 
-    if (!isElementGreaterThan7(getUsernameElement())) {
+    if (isElementGreaterThan7(getUsernameElement())) {
         errorMessage(getErrorTextUsername(), "Minimum 8 characters");
         redBorber(getUsernameElement());
         return false;
     }
 
-    if (!isElementLessThan13(getUsernameElement())) {
+    if (isElementLessThan13(getUsernameElement())) {
         errorMessage(getErrorTextUsername(), "Maximum 12 characters");
         redBorber(getUsernameElement());
         return false;
@@ -45,46 +45,31 @@ function formSubmit() {
 
 //Section of all checks
 
-//Check for filled fields
-function isOneFieldFilled(inputElement) {
-    if (inputElement.value == "") {
-        return false;
-    }
-    return true;
+//Check for empty fields
+function isOneFieldEmpty(inputElement) {
+    return inputElement.value == "";
 }
 
 //Check for element length greater than 7 
 function isElementGreaterThan7(inputElement) {
-    if (inputElement.value.length < 8) {
-        return false;
-    }
-    return true;  
+    return inputElement.value.length < 8;
 }
 
 //Check for element length less than 13
 function isElementLessThan13(inputElement) {
-    if (inputElement.value.length > 12) {
-        return false;
-    }
-    return true;  
+    return inputElement.value.length > 12;
 }
 
 //Check Regular Expression email
 function isRegexEmail(inputElement) {
     let emailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if (inputElement.value.match(emailformat)) {
-        return true;
-    }
-    return false;
+    return inputElement.value.match(emailformat);
 }
 
 //Check Regular Expression password
 function isRegexPassword(inputElement) {
     let passwordformat = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,12}$/;
-    if (inputElement.value.match(passwordformat)) {
-        return true;
-    }
-    return false;
+    return inputElement.value.match(passwordformat);
 }
 
 
