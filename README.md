@@ -1,3 +1,3 @@
 # Form-Validation
-Form validation snippet in pure Javascript
+Form validation snippet in pure Javascript<br>
 Deploy: https://formvalidationjs.netlify.app/
