@@ -1,0 +1,24 @@
+{
+  "name": "form-validation",
+  "version": "1.0.0",
+  "description": "Form validation snippet in pure Javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DomenicoMassimoCavaglieri/Form-Validation.git"
+  },
+  "keywords": [],
+  "author": "Domenico Massimo Cavaglieri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DomenicoMassimoCavaglieri/Form-Validation/issues"
+  },
+  "homepage": "https://github.com/DomenicoMassimoCavaglieri/Form-Validation#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
