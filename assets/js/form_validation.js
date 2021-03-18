@@ -112,6 +112,17 @@ function turnOffErrorPassword() {
     turnOffError(getErrorTextPassword(), getPasswordElement());
 }
 
+//Toggle between hidden and visible password
+getEye().addEventListener("click", function () {
+    let userPassword = document.getElementById("password");
+    if(userPassword.getAttribute("type") === "password") {
+      userPassword.setAttribute("type", "text");
+    } else {
+      userPassword.setAttribute("type", "password");
+    }
+    getEye().classList.toggle("closed-eye");
+  });
+
 
 //section of the elements get from the html document
 
@@ -128,6 +139,7 @@ function getPasswordElement() {
     return document.getElementById("password");
 }
 
+
 //Get error text elements from html document
 function getErrorTextUsername() {
     return document.getElementById("error-text-username");
@@ -141,5 +153,7 @@ function getErrorTextPassword() {
     return document.getElementById("error-text-password");
 }
 
-
-
+//Get Eye element
+function getEye() {
+    return document.getElementById("eye");
+}

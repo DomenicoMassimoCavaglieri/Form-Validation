@@ -68,6 +68,32 @@ input[type="password"] {
     color: #464342;
 }
 
+#eye {
+    position: absolute;
+    float: right;
+    margin-left: 240px;
+    margin-top: -30px;
+    z-index: 2;
+    color: #464342;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+  
+#eye:hover {
+    cursor: pointer;
+}
+
+.open-eye {
+    background-image: url(../img/eye_1x.png);
+}
+
+.closed-eye {
+    background-image: url(../img/eye_off_1x.png);
+}
+
 /* error messages */
 .error-box {
     width: 240px;
