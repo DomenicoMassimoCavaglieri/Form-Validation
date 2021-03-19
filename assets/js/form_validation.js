@@ -95,9 +95,9 @@ function turnOffError(errorText, inputElement) {
 // Section of the turn off of the error messages when the input field keydowns
 
 //Get of listening to the "keydown" event in the input fields
-document.getElementById("username").addEventListener("keydown", turnOffErrorUsername);
-document.getElementById("email").addEventListener("keydown", turnOffErrorEmail);
-document.getElementById("password").addEventListener("keydown", turnOffErrorPassword);
+getUsernameElement().addEventListener("keydown", turnOffErrorUsername);
+getEmailElement().addEventListener("keydown", turnOffErrorEmail);
+getPasswordElement().addEventListener("keydown", turnOffErrorPassword);
 
 //Turn off error messages when the input fields are no longer empty
 function turnOffErrorUsername() {
