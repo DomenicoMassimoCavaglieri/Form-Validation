@@ -114,11 +114,10 @@ function turnOffErrorPassword() {
 
 //Toggle between hidden and visible password
 getEye().addEventListener("click", function () {
-    let userPassword = document.getElementById("password");
-    if(userPassword.getAttribute("type") === "password") {
-      userPassword.setAttribute("type", "text");
+    if(getPasswordElement().getAttribute("type") === "password") {
+        getPasswordElement().setAttribute("type", "text");
     } else {
-      userPassword.setAttribute("type", "password");
+        getPasswordElement().setAttribute("type", "password");
     }
     getEye().classList.toggle("closed-eye");
   });
